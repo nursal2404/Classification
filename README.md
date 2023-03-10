@@ -1,1 +1,7 @@
-# Classification
+Implementasi dari algoritma deep learning yang menggunakan TensorFlow dan dataset MNIST. Dataset ini terdiri dari gambar angka tulisan tangan yang akan diklasifikasikan menjadi 10 kelas (0-9).
+
+Pertama-tama, dataset diunggah dan diproses dengan normalisasi, yaitu mengubah nilai piksel gambar menjadi rentang 0-1. Selanjutnya, model neural network dibangun dengan menggunakan tiga lapisan, yaitu satu lapisan flatten untuk mengubah input gambar menjadi vektor, satu lapisan dense (terhubung sepenuhnya) dengan 128 unit untuk mempelajari fitur-fitur pada gambar, dan satu lapisan dense dengan 10 unit dan aktivasi softmax untuk menghasilkan probabilitas prediksi pada setiap kelas.
+
+Model tersebut kemudian dikompilasi dengan optimizer 'adam' dan loss function 'sparse_categorical_crossentropy'. Selanjutnya, model tersebut dilatih dengan menggunakan fungsi fit() pada data latih selama 5 epoch. Pada saat dilatih, data validasi juga digunakan untuk mengevaluasi performa model dan memastikan bahwa model tidak overfitting. Setelah pelatihan, model dievaluasi dengan menggunakan data uji dan nilai akurasi pada data uji dicetak.
+
+Terakhir, grafik loss dan akurasi selama proses pelatihan dibuat dengan menggunakan Matplotlib untuk memvisualisasikan kinerja model. Grafik loss dan akurasi pada dataset latih dan validasi ditampilkan pada dua grafik terpisah. Hasilnya menunjukkan bahwa model berhasil mengenali angka dengan akurasi yang cukup tinggi dan tidak terjadi overfitting.
